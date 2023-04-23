@@ -14,10 +14,9 @@
 </.list>
 
 <.header class="pt-20">
-  
+Products at Store <%= @store.id %>
   <:subtitle>These are your products</:subtitle>
 </.header>
-
 
 
 <table class="border-spacing-4 bg-silver border border-slate-400">
@@ -32,10 +31,10 @@
 <%= for product <- @products do %>
   <%= if @store.store_id == product.store_id do %>
     <tr>
-      <td class="border border-slate-300  text-lg"><%= product.store_id %></td>
-      <td class="border border-slate-300"><%= product.vendor%></td>
-      <td class="border border-slate-300"><%= product.wholesalePrice%></td>
-      <td class="border border-slate-300"><%= product.retailPrice%></td>
+      <td class="border border-slate-300 text-center"><%= product.store_id %></td>
+      <td class="border border-slate-300 text-center"><%= product.vendor%></td>
+      <td class="border border-slate-300 text-center">$<%= product.wholesalePrice%></td>
+      <td class="border border-slate-300 text-center">$<%= product.retailPrice%></td>
       <td class="border border-slate-300 text-center"><%= product.inventoryCount%></td>
     </tr>
   <% end %>
