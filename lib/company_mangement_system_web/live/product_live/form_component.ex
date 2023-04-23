@@ -20,6 +20,7 @@ defmodule CompanyMangementSystemWeb.ProductLive.FormComponent do
         phx-submit="save"
       >
         <.input field={@form[:store_id]} type="select" label="Store ID"options={Enum.map(@stores, &(&1.id))} />
+        <.input field={@form[:name]} type="text" label="Name" />
         <.input field={@form[:vendor]} type="text" label="Vendor" />
         <.input field={@form[:wholesalePrice]} type="number" label="Wholesaleprice" step="any" />
         <.input field={@form[:retailPrice]} type="number" label="Retailprice" step="any" />

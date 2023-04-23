@@ -8,6 +8,7 @@ defmodule CompanyMangementSystem.Repo.Migrations.CreateProducts do
       add :retailPrice, :float
       add :inventoryCount, :integer
       add :store_id, references(:stores, on_delete: :nothing)
+      add :name, :string
 
       timestamps()
     end

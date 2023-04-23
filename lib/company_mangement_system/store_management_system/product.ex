@@ -9,6 +9,7 @@ defmodule CompanyMangementSystem.StoreManagementSystem.Product do
     field :retailPrice, :float
     field :vendor, :string
     field :wholesalePrice, :float
+    field :name, :string
     belongs_to :store, Store
 
     timestamps()
@@ -17,7 +18,7 @@ defmodule CompanyMangementSystem.StoreManagementSystem.Product do
   @doc false
   def changeset(product, attrs) do
     product
-    |> cast(attrs, [:vendor, :wholesalePrice, :retailPrice, :inventoryCount, :store_id])
-    |> validate_required([:vendor, :wholesalePrice, :retailPrice, :inventoryCount, :store_id])
+    |> cast(attrs, [:vendor, :wholesalePrice, :retailPrice, :inventoryCount, :store_id, :name])
+    |> validate_required([:vendor, :wholesalePrice, :retailPrice, :inventoryCount, :store_id, :name])
   end
 end

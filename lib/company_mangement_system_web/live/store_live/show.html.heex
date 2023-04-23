@@ -18,12 +18,11 @@ Products at Store <%= @store.id %>
   <:subtitle>These are your products</:subtitle>
 </.header>
 
-
 <table class="border-spacing-4 bg-silver border border-slate-400">
   <thead class="">
     <tr>
-      <th class="border border-slate-800 px-4 ">Store</th>
-      <th class="border border-slate-800 px-4">Vendor</th>
+      <th class="border border-slate-800 px-10 ">Name</th>
+      <th class="border border-slate-800 px-8">Vendor</th>
       <th class="border border-slate-800 px-4">Whole Sale Price</th>
       <th class="border border-slate-800 px-4">Retail Price</th>
       <th class="border border-slate-800 px-4">Inventory Count</th>
@@ -31,7 +30,7 @@ Products at Store <%= @store.id %>
 <%= for product <- @products do %>
   <%= if @store.store_id == product.store_id do %>
     <tr>
-      <td class="border border-slate-300 text-center"><%= product.store_id %></td>
+      <td class="border border-slate-300 text-center"><%= product.name %></td>
       <td class="border border-slate-300 text-center"><%= product.vendor%></td>
       <td class="border border-slate-300 text-center">$<%= product.wholesalePrice%></td>
       <td class="border border-slate-300 text-center">$<%= product.retailPrice%></td>
