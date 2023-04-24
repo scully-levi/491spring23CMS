@@ -3,8 +3,9 @@ defmodule CompanyMangementSystem.Repo.Migrations.CreateStores do
 
   def change do
     create table(:stores) do
-      add :location, {:array, :string}
+      add :location, :string
       add :store_id, :integer
+      
 
       timestamps()
     end

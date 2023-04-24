@@ -209,5 +209,6 @@ defmodule CompanyMangementSystem.StoreManagementSystem do
   """
   def change_product(%Product{} = product, attrs \\ %{}) do
     Product.changeset(product, attrs)
+
   end
 end

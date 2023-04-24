@@ -19,15 +19,10 @@ defmodule CompanyMangementSystemWeb.StoreLive.FormComponent do
         phx-change="validate"
         phx-submit="save"
       >
-        <.input
-          field={@form[:location]}
-          type="select"
-          multiple
-          label="Location"
-          options={[{"Option 1", "option1"}, {"Option 2", "option2"}]}
-        />
-        <.input field={@form[:store_id]} type="number" label="Store" />
+        <.input field={@form[:store_id]} type="number" label="Store #" />
+        <.input field={@form[:location]} type="text" label="Location"/>
         <:actions>
+          <.button >Save Store</.button>
           <.button phx-disable-with="Saving...">Save Store</.button>
         </:actions>
       </.simple_form>

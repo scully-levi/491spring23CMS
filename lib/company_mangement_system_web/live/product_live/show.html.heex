@@ -11,9 +11,9 @@
 <.list>
   <:item title="Store"><%= @product.store_id %></:item>
   <:item title="Vendor"><%= @product.vendor %></:item>
-  <:item title="Wholesaleprice"><%= @product.wholesalePrice %></:item>
-  <:item title="Retailprice"><%= @product.retailPrice %></:item>
-  <:item title="Inventorycount"><%= @product.inventoryCount %></:item>
+  <:item title="Wholesale price"><%= @product.wholesalePrice %></:item>
+  <:item title="Retail price"><%= @product.retailPrice %></:item>
+  <:item title="Inventory count"><%= @product.inventoryCount %></:item>
 </.list>
 
 <.back navigate={~p"/products"}>Back to products</.back>
@@ -25,6 +25,7 @@
     title={@page_title}
     action={@live_action}
     product={@product}
+    stores={@stores}
     patch={~p"/products/#{@product}"}
   />
 </.modal>
